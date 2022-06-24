@@ -29,13 +29,12 @@ export const getweatherAction = (props) => {
         console.log("Latitude:", data[0].lat);
         console.log("Longitude:", data[0].lon);
 
-        dispatch(
-          {
-            type: SET_LONGITUDE,
-            payload: data[0].lon,
-          },
-          { type: SET_LATITUDE, payload: data[0].lat }
-        );
+        dispatch({
+          type: SET_LONGITUDE,
+          payload: data[0].lon,
+        });
+
+        dispatch({ type: SET_LATITUDE, payload: data[0].lat });
 
         let response2 = await fetch(
           "https://api.openweathermap.org/data/2.5/weather?lat=" +
