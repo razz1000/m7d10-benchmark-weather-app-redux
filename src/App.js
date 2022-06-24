@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import FrontPage from "./components/FrontPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Container>
+        <Row>
+          <Col sm={12}>
+            <Link to="/">
+              <h1>The ultimate weather app</h1>
+            </Link>
+          </Col>
+          {/*       <FavoriteIndicator />
+           */}{" "}
+        </Row>
+
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          {/*           <Route path="/:company" element={<JobDetailsPage />} />
+          <Route path="/favorites" element={<Favorites />} /> */}
+        </Routes>
+      </Container>
+    </BrowserRouter>
   );
 }
 
