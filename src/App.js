@@ -14,10 +14,7 @@ function App() {
               <h1>The ultimate weather app</h1>
             </Link>
           </Col>
-          {/*       <FavoriteIndicator />
-           */}{" "}
         </Row>
-
         <Routes>
           <Route path="/" element={<FrontPage />} />
           {/*           <Route path="/:company" element={<JobDetailsPage />} />

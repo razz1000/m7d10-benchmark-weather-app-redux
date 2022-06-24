@@ -1,7 +1,7 @@
 import { GET_WEATHER, TOGGLE_ERROR, TOGGLE_SPINNER } from "../actions";
 
 const initialState = {
-  weatherData: [],
+  weatherData: {},
   isLoading: false,
   isError: false,
 };
